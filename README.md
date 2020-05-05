@@ -57,7 +57,6 @@ appBar: AppBar(
   ],
 ),
 ```
- 
 
 ## Step 3:
 Assign the item height value to the `agendaItemHeight` property of the `MonthViewSettings` in the calendar widget.
@@ -76,3 +75,10 @@ body: Column(
   ],
 ),
 ```
+**[View document in Syncfusion Flutter Knowledge base](https://www.syncfusion.com/kb/11015/how-to-customize-the-agenda-item-height-in-the-flutter-event-calendar-sfcalendar)**
+
+**Screenshots**
+
+![height1](http://www.syncfusion.com/uploads/user/kb/flut/flut-709/flut-709_img1.jpeg)
+![height2](http://www.syncfusion.com/uploads/user/kb/flut/flut-709/flut-709_img2.jpeg)
+![height3](http://www.syncfusion.com/uploads/user/kb/flut/flut-709/flut-709_img3.jpeg)
