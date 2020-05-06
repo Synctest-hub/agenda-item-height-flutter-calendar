@@ -79,6 +79,6 @@ body: Column(
 
 **Screenshots**
 
-<img alt="height1"  src="http://www.syncfusion.com/uploads/user/kb/flut/flut-709/flut-709_img1.jpeg" width="250" height="400" />|
-<img alt="height2"  src="http://www.syncfusion.com/uploads/user/kb/flut/flut-709/flut-709_img2.jpeg" width="250" height="400" />|
-<img alt="height3"  src="http://www.syncfusion.com/uploads/user/kb/flut/flut-709/flut-709_img3.jpeg" width="250" height="400" />|
+<img alt="height1"  src="http://www.syncfusion.com/uploads/user/kb/flut/flut-709/flut-709_img1.jpeg" width="250" height="500" />|
+<img alt="height2"  src="http://www.syncfusion.com/uploads/user/kb/flut/flut-709/flut-709_img2.jpeg" width="250" height="500" />|
+<img alt="height3"  src="http://www.syncfusion.com/uploads/user/kb/flut/flut-709/flut-709_img3.jpeg" width="250" height="500" />|
