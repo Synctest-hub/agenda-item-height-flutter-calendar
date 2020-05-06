@@ -79,6 +79,6 @@ body: Column(
 
 **Screenshots**
 
-![height1](http://www.syncfusion.com/uploads/user/kb/flut/flut-709/flut-709_img1.jpeg)
-![height2](http://www.syncfusion.com/uploads/user/kb/flut/flut-709/flut-709_img2.jpeg)
-![height3](http://www.syncfusion.com/uploads/user/kb/flut/flut-709/flut-709_img3.jpeg)
+<img alt="height1"  src="http://www.syncfusion.com/uploads/user/kb/flut/flut-709/flut-709_img1.jpeg" width="250" height="400" />|
+<img alt="height2"  src="http://www.syncfusion.com/uploads/user/kb/flut/flut-709/flut-709_img2.jpeg" width="250" height="400" />|
+<img alt="height3"  src="http://www.syncfusion.com/uploads/user/kb/flut/flut-709/flut-709_img3.jpeg" width="250" height="400" />|
