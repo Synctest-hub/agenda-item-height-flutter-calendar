@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 import 'package:syncfusion_flutter_calendar/calendar.dart';
-import 'package:intl/intl.dart';
 
 void main() => runApp(AgendaItemHeight());
 
@@ -24,14 +23,12 @@ class CustomAgendaHeight extends StatefulWidget {
 List<String> size = <String>['60', '50', '40', '30'];
 
 class ScheduleExample extends State<CustomAgendaHeight> {
-  CalendarView _calendarView;
-  List<Appointment> appointmentDetails;
-  double itemHeight;
+  List<Appointment>? appointmentDetails;
+  double? itemHeight;
 
   @override
   void initState() {
     appointmentDetails = <Appointment>[];
-    _calendarView = CalendarView.month;
     itemHeight = 0.0;
     super.initState();
   }
@@ -75,10 +72,10 @@ class ScheduleExample extends State<CustomAgendaHeight> {
         children: <Widget>[
           Expanded(
             child: SfCalendar(
-              view: _calendarView,
+              view: CalendarView.month,
               dataSource: getCalendarDataSource(),
               monthViewSettings:
-                  MonthViewSettings(showAgenda: true, agendaItemHeight: itemHeight),
+              MonthViewSettings(showAgenda: true, agendaItemHeight: itemHeight!),
             ),
           ),
         ],
