@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 import 'package:syncfusion_flutter_calendar/calendar.dart';
-import 'package:intl/intl.dart';
 
 void main() => runApp(AgendaItemHeight());
 
@@ -21,20 +20,9 @@ class CustomAgendaHeight extends StatefulWidget {
   State<StatefulWidget> createState() => ScheduleExample();
 }
 
-List<String> size = <String>['60', '50', '40', '30'];
-
 class ScheduleExample extends State<CustomAgendaHeight> {
-  CalendarView _calendarView;
-  List<Appointment> appointmentDetails;
-  double itemHeight;
-
-  @override
-  void initState() {
-    appointmentDetails = <Appointment>[];
-    _calendarView = CalendarView.month;
-    itemHeight = 0.0;
-    super.initState();
-  }
+  List<String> _size = <String>['60', '50', '40', '30'];
+  double _itemHeight = 0.0;
 
   @override
   Widget build(BuildContext context) {
@@ -44,7 +32,7 @@ class ScheduleExample extends State<CustomAgendaHeight> {
           PopupMenuButton<String>(
             icon: Icon(Icons.settings),
             itemBuilder: (BuildContext context) {
-              return size.map((String choice) {
+              return _size.map((String choice) {
                 return PopupMenuItem<String>(
                   value: choice,
                   child: Text(
@@ -56,15 +44,15 @@ class ScheduleExample extends State<CustomAgendaHeight> {
             onSelected: (String value) {
               setState(() {
                 if (value == '60') {
-                  itemHeight = 60;
+                  _itemHeight = 60;
                 } else if (value == '50') {
-                  itemHeight = 50;
+                  _itemHeight = 50;
                 } else if (value == '40') {
-                  itemHeight = 40;
+                  _itemHeight = 40;
                 } else if (value == '30') {
-                  itemHeight = 30;
+                  _itemHeight = 30;
                 } else if (value == '20') {
-                  itemHeight = 20;
+                  _itemHeight = 20;
                 }
               });
             },
@@ -75,13 +63,13 @@ class ScheduleExample extends State<CustomAgendaHeight> {
         children: <Widget>[
           Expanded(
             child: SfCalendar(
-              view: _calendarView,
+              view: CalendarView.month,
               dataSource: getCalendarDataSource(),
-              monthViewSettings:
-                  MonthViewSettings(showAgenda: true, agendaItemHeight: itemHeight),
+              monthViewSettings: MonthViewSettings(
+                showAgenda: true, agendaItemHeight: _itemHeight,
+              ),
             ),
-          ),
-        ],
+          )],
       ),
     ));
   }
