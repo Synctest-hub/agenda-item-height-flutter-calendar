@@ -21,14 +21,8 @@ class CustomAgendaHeight extends StatefulWidget {
 }
 
 class ScheduleExample extends State<CustomAgendaHeight> {
-  List<String> size = <String>['60', '50', '40', '30'];
-  List<Appointment> appointmentDetails = <Appointment>[];
-  double itemHeight = 0.0;
-
-  @override
-  void initState() {
-    super.initState();
-  }
+  List<String> _size = <String>['60', '50', '40', '30'];
+  double _itemHeight = 0.0;
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +32,7 @@ class ScheduleExample extends State<CustomAgendaHeight> {
           PopupMenuButton<String>(
             icon: Icon(Icons.settings),
             itemBuilder: (BuildContext context) {
-              return size.map((String choice) {
+              return _size.map((String choice) {
                 return PopupMenuItem<String>(
                   value: choice,
                   child: Text(
@@ -50,15 +44,15 @@ class ScheduleExample extends State<CustomAgendaHeight> {
             onSelected: (String value) {
               setState(() {
                 if (value == '60') {
-                  itemHeight = 60;
+                  _itemHeight = 60;
                 } else if (value == '50') {
-                  itemHeight = 50;
+                  _itemHeight = 50;
                 } else if (value == '40') {
-                  itemHeight = 40;
+                  _itemHeight = 40;
                 } else if (value == '30') {
-                  itemHeight = 30;
+                  _itemHeight = 30;
                 } else if (value == '20') {
-                  itemHeight = 20;
+                  _itemHeight = 20;
                 }
               });
             },
@@ -72,10 +66,10 @@ class ScheduleExample extends State<CustomAgendaHeight> {
               view: CalendarView.month,
               dataSource: getCalendarDataSource(),
               monthViewSettings: MonthViewSettings(
-                  showAgenda: true, agendaItemHeight: itemHeight!),
+                showAgenda: true, agendaItemHeight: _itemHeight,
+              ),
             ),
-          ),
-        ],
+          )],
       ),
     ));
   }
