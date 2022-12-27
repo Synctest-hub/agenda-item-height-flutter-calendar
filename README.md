@@ -4,6 +4,8 @@ A quick-start example to help you to customize the agenda item height in the Flu
 
 The agenda item height in the Flutter Event Calendar can be customised using the `agendaItemHeight` property of the calendar widget's `MonthViewSettings`.
 
+![AgendaItemHeight](https://user-images.githubusercontent.com/46158936/209645107-ee3fc7a0-0ea8-40ea-b8ff-70b70cf168cb.jpeg)
+
 For more details, you can refer to our [KB](https://www.syncfusion.com/kb/11015/how-to-customize-the-agenda-item-height-in-the-flutter-calendar) documentation.
 
 ## Requirements to run the demo
